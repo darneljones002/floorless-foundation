@@ -1,8 +1,6 @@
-/*
-Floorless Foundation - React + Tailwind Starter (JSX, mobile-friendly, smooth scroll + animations)
-*/
-
 import React, { useState, useEffect } from 'react'
+import Logo from './assets/FF-logo.avif'
+import Sleep from './assets/sleep-kits.avif'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +14,10 @@ const Navbar = () => {
     <header className="bg-primary text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-accent rounded flex items-center justify-center font-bold text-primary">FF</div>
+          {/* <div className="w-10 h-10 bg-accent rounded flex items-center justify-center font-bold text-primary">FF</div> */}
+          <div className="w-10 h-10 rounded overflow-hidden flex items-center justify-center">
+            <img src={Logo} alt="Floorless Foundation Logo" className="w-full h-full object-cover" />
+          </div>
           <div>
             <h1 className="font-display text-xl">Floorless Foundation</h1>
             <p className="text-xs opacity-80">Good night's sleep • STEM for all</p>
@@ -75,8 +76,8 @@ const Hero = () => {
         </div>
 
         <div className={`flex-1 ${fade}`}>
-          <div className="rounded-lg overflow-hidden shadow-lg bg-white transform hover:scale-105 transition-transform duration-500">
-            <img alt="sleep kit" src="/hero-sleepkit.jpg" className="w-full h-64 md:h-80 object-cover" />
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <img alt="sleep kit" src={Sleep} className="w-full h-64 md:h-80 object-contain bg-accent" />
           </div>
         </div>
       </div>
