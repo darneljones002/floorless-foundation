@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        earth: {
-          light: "#e5e2d6",
-          medium: "#f1d782",
-          dark: "#966639",
-          green: "#c5a468",
-          clay: "#000000",
-        },
+        primary: "#0B2545", // deep navy
+        accent: "#F6C14B", // collegiate gold
+        student: "#8A1538", // collegiate maroon
+      },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
+        display: ['"Poppins"', "Inter", "sans-serif"],
       },
     },
   },
