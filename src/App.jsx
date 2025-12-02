@@ -179,7 +179,7 @@ const Contact = () => {
 const Footer = () => (
   <footer className="bg-primary text-white py-6">
     <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div className="text-sm text-center md:text-left">© {new Date().getFullYear()} The Floorless Foundation</div>
+      <div className="text-sm text-center md:text-left">© {new Date().getFullYear()} The Floorless Foundation. Created by Render Forge Inc</div>
       <div className="flex gap-4 text-sm justify-center md:justify-end">
         <button>Privacy</button>
         <button>Terms</button>
