@@ -129,29 +129,32 @@ const Programs = () => {
   )
 }
 
+// --- Gallery Component Fix ---
+// Dynamically import all gallery images using import.meta.glob
+function importAll(r) {
+  return r.keys().map(r);
+}
+const galleryList = importAll(require.context('./assets/gallery', false, /\.(png|jpe?g|svg)$/));
+
+
 const Gallery = () => {
-  const fade = useFadeIn(600);
   return (
     <section id="gallery" className="py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <h3 className={`text-2xl font-bold text-primary text-center md:text-left ${fade}`}>Gallery</h3>
-        <p className={`mt-2 text-sm opacity-90 text-center md:text-left ${fade}`}>Moments from our outreach and STEM events.</p>
+        <h3 className="text-2xl font-bold text-primary text-center md:text-left">Gallery</h3>
+        <p className="mt-2 text-sm opacity-90 text-center md:text-left">Moments from our outreach and STEM events.</p>
 
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="rounded overflow-hidden shadow-sm transform hover:scale-105 transition-transform duration-500">
-              <img src={`/gallery/${i + 1}.jpg`} alt={`gallery-${i}`} className="w-full h-40 sm:h-48 object-cover" />
+          {galleryList.map((src, i) => (
+            <div key={i} className="rounded overflow-hidden shadow-sm transform hover:scale-105 transition-transform duration-300">
+              <img src={src} alt={`gallery-${i}`} className="w-full h-40 sm:h-48 object-cover" />
             </div>
           ))}
         </div>
-
-        <div className="mt-6 flex justify-center md:justify-start gap-3">
-          <button className="text-sm underline" onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}>View full gallery</button>
-        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 const Contact = () => {
   const fade = useFadeIn(800);
