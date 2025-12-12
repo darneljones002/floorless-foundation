@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Logo from './assets/FF-logo.avif'
-import Sleep from './assets/sleep-kits.avif'
+import Home from './assets/gallery/gallery-8.jpg'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,7 +66,7 @@ const Hero = () => {
           <p className="mt-4 text-lg opacity-90">The Floorless Foundation provides sleeping kits and STEM experiences for people experiencing homelessness — powered by passionate students and campus partners.</p>
 
           <div className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
-            <button onClick={(e) => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })} className="bg-accent text-primary px-5 py-3 rounded-md font-semibold shadow">Get Involved</button>
+            <button onClick={(e) => document.getElementById('programs')?.scrollIntoView({ behavior: 'smooth' })} className="bg-accent text-primary px-5 py-3 rounded-md font-semibold shadow">Learn More</button>
             <button onClick={(e) => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="border border-white/20 px-5 py-3 rounded-md mt-2 sm:mt-0">Contact Us</button>
           </div>
 
@@ -77,7 +77,7 @@ const Hero = () => {
 
         <div className={`flex-1 ${fade}`}>
           <div className="rounded-lg overflow-hidden shadow-lg">
-            <img alt="sleep kit" src={Sleep} className="w-full h-64 md:h-80 object-contain bg-accent" />
+            <img alt="sleep kit" src={Home} className="w-full h-64 md:h-80 object-contain " />
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ const Programs = () => {
           {[
             { title: "Good Night's Sleep", desc: "We distribute sleeping kits and educate volunteers on compassionate outreach.", action: "Learn More →" },
             { title: "STEM WARS", desc: "Hands-on STEM experiences for youth and community centers—run by student teams.", action: "Volunteer →" },
-            { title: "Campus Chapters", desc: "Start or join a chapter on your campus to organize drives and events.", action: "Start a Chapter →" }
+            { title: "The DREAMER Scholarship", desc: "Scholarship fund for Savannah State University Mathematic Students.", action: "Apply Now →" }
           ].map((program, i) => (
             <div key={i} className={`p-6 bg-white rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105 duration-500 flex flex-col justify-between`}>
               <div>
