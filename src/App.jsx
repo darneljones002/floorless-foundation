@@ -5,9 +5,9 @@ import Logo from './assets/FF-logo.avif'
 import Home from './assets/gallery/gallery-8.jpg'
 
 // Program page hero/illustration images (swap to whatever files you want)
-import ProgramSleepImg from './assets/gallery/gallery-8.jpg'
+import ProgramSleepImg from './assets/gallery/gallery-1.jpg'
 import ProgramStemImg from './assets/gallery/gallery-2.jpg'
-import ProgramDreamerImg from './assets/gallery/gallery-10.jpg'
+import ProgramDreamerImg from './assets/gallery/gallery-9.jpg'
 
 // ---------------------------
 // Utils
@@ -393,7 +393,13 @@ const ProgramDetail = ({ title, subtitle, bullets, heroImg, illustrationImgs }) 
 const GoodNightsSleepPage = () => (
   <ProgramDetail
     title="Good Night's Sleep"
-    subtitle="We provide essential sleeping kits and support compassionate outreach that meets people where they are."
+    subtitle="Your support of the Comfort &amp; Care Outreach program helps provide dignity, warmth, and basic
+                necessities to individuals experiencing hardship. Through the distribution of sleeping bags and
+                hygiene kits, donors directly help ensure that someone has a safer, more comfortable night’s rest
+                and access to essential personal care items
+                With donor support, this program has already reached over 2,000 individuals, meeting urgent
+                needs while offering compassion and hope. Every contribution helps us continue delivering
+                comfort where it is needed most—because stability begins with care."
     heroImg={ProgramSleepImg}
     illustrationImgs={[ProgramSleepImg, ProgramStemImg, ProgramDreamerImg]}
     bullets={[
@@ -408,7 +414,13 @@ const GoodNightsSleepPage = () => (
 const StemWarsPage = () => (
   <ProgramDetail
     title="STEM WARS"
-    subtitle="Student-powered STEM experiences that make learning hands-on, high-energy, and accessible."
+    subtitle="STEM WARS empowers donors to invest in the future by inspiring the next generation of
+              innovators, leaders, and problem-solvers. Contributions support hands-on STEM education
+              experiences for youth in communities around the world, exposing students to science,
+              technology, engineering, and math in meaningful and engaging ways.
+              Thanks to donor generosity, STEM WARS has already impacted over 20,000 students globally.
+              Your support helps spark curiosity, build confidence, and open doors to educational and career
+              opportunities that can shape a student’s future for years to come."
     heroImg={ProgramStemImg}
     illustrationImgs={[ProgramStemImg, ProgramSleepImg, ProgramDreamerImg]}
     bullets={[
@@ -423,7 +435,13 @@ const StemWarsPage = () => (
 const DreamerScholarshipPage = () => (
   <ProgramDetail
     title="The DREAMER Scholarship"
-    subtitle="A scholarship initiative supporting Savannah State University mathematics students pursuing academic excellence."
+    subtitle="The Dreamer Scholarship allows donors to make a lasting impact on a student’s academic
+                journey. This program currently awards $1,000 annually to a Savannah State University student
+                who demonstrates determination, resilience, and a commitment to higher education.
+                Donor support makes it possible to reduce financial barriers, ease the burden of tuition and
+                expenses, and empower students to focus on their education. As the Foundation grows,
+                contributions will help us increase the scholarship amount in the near future, expanding
+                opportunities for students to pursue their dreams without limitation."
     heroImg={ProgramDreamerImg}
     illustrationImgs={[ProgramDreamerImg, ProgramStemImg, ProgramSleepImg]}
     bullets={[
