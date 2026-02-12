@@ -266,33 +266,51 @@ const Gallery = () => {
 }
 
 const Contact = () => {
-  const fade = useFadeIn(800)
-  return (
-    <section id="contact" className="py-16 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-6">
-        <h3 className={`text-2xl font-bold text-primary text-center md:text-left ${fade}`}>Contact Us</h3>
-        <p className={`mt-2 text-sm opacity-90 text-center md:text-left ${fade}`}>
-          Have questions or want to start a campus chapter? Reach out.
-        </p>
+const fade = useFadeIn(800)
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [subject, setSubject] = useState('')
+const [message, setMessage] = useState('')
 
-        <form className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input className="p-3 rounded border w-full" placeholder="Name" />
-          <input className="p-3 rounded border w-full" placeholder="Email" />
-          <input className="p-3 rounded border md:col-span-2 w-full" placeholder="Subject" />
-          <textarea className="p-3 rounded border md:col-span-2 w-full" rows={5} placeholder="Message" />
-          <div className="md:col-span-2 flex justify-center md:justify-start">
-            <button className="bg-primary text-white px-5 py-3 rounded font-semibold w-full md:w-auto">Send Message</button>
-          </div>
-        </form>
 
-        <div className="mt-6 text-sm opacity-90 text-center md:text-left">
-          Email:{' '}
-          <a className="underline" href="mailto:FloorlessFoundation@gmail.com">FloorlessFoundation@gmail.com</a>
-          {' '}• Phone: 478-588-7288
-        </div>
-      </div>
-    </section>
-  )
+const handleSubmit = (e) => {
+e.preventDefault()
+
+
+const mailSubject = encodeURIComponent(subject || 'Website Inquiry')
+const mailBody = encodeURIComponent(`Name: ${name}
+Email: ${email}
+
+
+${message}`)
+
+
+window.location.href = `mailto:FloorlessFoundation@gmail.com?subject=${mailSubject}&body=${mailBody}`
+}
+
+
+return (
+<section id="contact" className="py-16 bg-gray-50">
+<div className="max-w-4xl mx-auto px-6">
+<h3 className={`text-2xl font-bold text-primary text-center md:text-left ${fade}`}>Contact Us</h3>
+<p className={`mt-2 text-sm opacity-90 text-center md:text-left ${fade}`}>Have questions or want to start a campus chapter? Reach out.</p>
+
+
+<form onSubmit={handleSubmit} className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+<input value={name} onChange={(e)=>setName(e.target.value)} required className="p-3 rounded border w-full" placeholder="Name" />
+<input value={email} onChange={(e)=>setEmail(e.target.value)} required type="email" className="p-3 rounded border w-full" placeholder="Email" />
+<input value={subject} onChange={(e)=>setSubject(e.target.value)} className="p-3 rounded border md:col-span-2 w-full" placeholder="Subject" />
+<textarea value={message} onChange={(e)=>setMessage(e.target.value)} required className="p-3 rounded border md:col-span-2 w-full" rows={5} placeholder="Message" />
+<div className="md:col-span-2 flex justify-center md:justify-start">
+<button type="submit" className="bg-primary text-white px-5 py-3 rounded font-semibold w-full md:w-auto">Send Message</button>
+</div>
+</form>
+
+
+<div className="mt-6 text-sm opacity-90 text-center md:text-left">Email: <a className="underline" href="mailto:FloorlessFoundation@gmail.com">FloorlessFoundation@gmail.com</a> • Phone: 478-588-7288</div>
+</div>
+</section>
+)
 }
 
 const Footer = () => (
