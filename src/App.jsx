@@ -7,7 +7,7 @@ import Home from './assets/gallery/gallery-8.jpg'
 // Program page hero/illustration images (swap to whatever files you want)
 import ProgramSleepImg from './assets/gallery/gallery-1.jpg'
 import ProgramStemImg from './assets/gallery/gallery-2.jpg'
-import ProgramDreamerImg from './assets/gallery/gallery-9.jpg'
+import ProgramDreamerImg from './assets/gallery/DreamerScholarship.jpg'
 
 // ---------------------------
 // Utils
@@ -95,7 +95,7 @@ const Navbar = () => {
           >
             Our Story
           </button>
-          <button className="ml-2 bg-accent text-primary px-4 py-2 rounded font-semibold hover:brightness-95">Donate</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeg-ZA4ttHqb9mhUkBxkgMG96lFOaMNJlgJJyMECQNq5vjpEg/viewform?pli=1" target="_blank" rel="noopener noreferrer" className="ml-2 bg-accent text-primary px-4 py-2 rounded font-semibold hover:brightness-95 inline-block text-center">Donate</a>
         </nav>
 
         <div className="md:hidden">
@@ -115,8 +115,7 @@ const Navbar = () => {
           <button type="button" onClick={() => { navigate('/about'); setIsOpen(false) }} className="hover:underline text-left">
             Our Story
           </button>
-          <button className="bg-accent text-primary px-4 py-2 rounded font-semibold hover:brightness-95">Donate</button>
-        </div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeg-ZA4ttHqb9mhUkBxkgMG96lFOaMNJlgJJyMECQNq5vjpEg/viewform?pli=1" target="_blank" rel="noopener noreferrer" className="ml-2 bg-accent text-primary px-4 py-2 rounded font-semibold hover:brightness-95 inline-block text-center">Donate</a>        </div>
       )}
     </header>
   )
