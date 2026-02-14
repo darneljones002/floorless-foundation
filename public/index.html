@@ -5,44 +5,91 @@
     <link rel="icon" href="%PUBLIC_URL%/FF-logo.avif" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Primary Meta Tags -->
+    <title>The Floorless Foundation</title>
+    <meta
+      name="title"
+      content="The Floorless Foundation | A Place to Sleep, A Chance to Learn"
+    />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="A Place to Sleep, A Chance to Learn"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/FF-logo.avif" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Floorless Foundation</title>
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.thefloorlessfoundation.org/" />
+    <meta
+      property="og:title"
+      content="The Floorless Foundation | A Place to Sleep, A Chance to Learn"
+    />
+    <meta
+      property="og:description"
+      content="The Floorless Foundation provides sleeping kits and STEM experiences for people experiencing homelessness — powered by passionate students and campus partners."
+    />
+    <meta property="og:image" content="https://www.thefloorlessfoundation.org/FF-logo.avif" />
+    <meta property="og:site_name" content="The Floorless Foundation" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.thefloorlessfoundation.org/" />
+    <meta
+      name="twitter:title"
+      content="The Floorless Foundation | A Place to Sleep, A Chance to Learn"
+    />
+    <meta
+      name="twitter:description"
+      content="The Floorless Foundation provides sleeping kits and STEM experiences for people experiencing homelessness — powered by passionate students and campus partners."
+    />
+    <meta name="twitter:image" content="https://www.thefloorlessfoundation.org/FF-logo.avif" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/FF-logo.avif" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Schema Markup for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "The Floorless Foundation",
+        "image": "https://www.thefloorlessfoundation.org/FF-logo.avif",
+        "@id": "https://www.thefloorlessfoundation.org",
+        "url": "https://www.thefloorlessfoundation.org",
+        "logo": "https://www.thefloorlessfoundation.org/FF-logo.avif",
+        "description": "The Floorless Foundation provides sleeping kits and STEM experiences for people experiencing homelessness — powered by passionate students and campus partners.",
+        "founder": {
+          "@type": "Person",
+          "name": "Karlos Markland",
+          "jobTitle": "Chair"
+        },
+        "sameAs": [
+          "https://www.instagram.com/thefloorlessfoundation/",
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "United States"
+        },
+        "slogan": "A Place to Sleep, A Chance to Learn"
+      }
+    </script>
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
